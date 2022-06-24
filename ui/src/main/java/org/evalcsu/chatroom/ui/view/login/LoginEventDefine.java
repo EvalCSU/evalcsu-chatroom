@@ -12,8 +12,8 @@ public class LoginEventDefine {
     }
 
     private void EventLogin() {
-        loginInit.login_button.addActionListener(event -> {
-            loginEvent.loginCheck(loginInit.userId.getText());
+        loginInit.button_login.setOnAction(event -> {
+            loginEvent.loginCheck(loginInit.textField_userId.getText());
         });
     }
 }

@@ -1,7 +1,10 @@
 package org.evalcsu.chatroom.ui.view.login;
 
+import org.evalcsu.chatroom.ui.view.chat.IChatMethod;
+
 public class LoginController extends LoginInit implements ILoginMethod {
 
+    private IChatMethod chat;
     private LoginView loginView;
     private LoginEventDefine loginEventDefine;
 
