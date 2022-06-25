@@ -7,6 +7,10 @@ public abstract class UIObject extends Stage {
 
     protected Parent root;
 
+    public <T> T $(String id, Class<T> clazz) {
+        return (T) root.lookup("#" + id);
+    }
+
     /**
      * 初始化窗口
      */

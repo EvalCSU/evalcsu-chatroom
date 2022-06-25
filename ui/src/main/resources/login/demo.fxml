@@ -13,13 +13,13 @@
    <children>
       <ImageView id="background" fitHeight="243.0" fitWidth="540.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../img/8485.jpg_wh300.jpg" />
+            <Image url="@../img/8485.jpg_wh300.jpg" />
          </image>
       </ImageView>
 
       <ImageView id="headImg" layoutX="78.0" layoutY="240.0">
          <image>
-            <Image url="@../../img/icons8-dinosaur-egg-100.png" />
+            <Image url="@../img/icons8-dinosaur-egg-100.png" />
          </image>
       </ImageView>
       <TextField id="textField_userId" layoutX="199.0" layoutY="268.0" prefHeight="45" prefWidth="250" promptText="用户名">

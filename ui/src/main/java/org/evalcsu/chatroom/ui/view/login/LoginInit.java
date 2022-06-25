@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public abstract class LoginInit extends UIObject {
 
-    private static final String LOGIN= "/fxml/login/demo.fxml";
+    private static final String LOGIN= "/login/demo.fxml";
     private static final String ICON="/img/icons8-flying-duck-100.png";
     protected ILoginEvent loginEvent;
 
