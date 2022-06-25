@@ -6,7 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="aggrement" />
+        <module name="client" />
         <module name="ui" />
+        <module name="ddd" />
       </profile>
     </annotationProcessing>
   </component>
