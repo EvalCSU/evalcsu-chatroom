@@ -4,7 +4,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import org.evalcsu.chatroom.ui.util.CacheUtil;
 import org.evalcsu.chatroom.ui.view.UIObject;
 import org.evalcsu.chatroom.ui.view.chat.element.ElementTalk;
@@ -13,8 +15,7 @@ import java.io.IOException;
 
 public abstract class ChatInit extends UIObject {
 
-    private static final String CHATGROUP= "/chat/fxml/demo.fxml";
-
+    private static final String CHAT_GROUP = "/chat/fxml/demo.fxml";
     public String userId;
     public String userName;
     public String userHead;
@@ -22,6 +23,9 @@ public abstract class ChatInit extends UIObject {
     public IChatEvent chatEvent;
     public String commonId, serverId;
 
+    public Pane pane_main;
+    public VBox vbox_main;
+    public HBox hbox_message_user;
     public ScrollPane pane_message;
     public Pane pane_talk, pane_user;
     public ListView listView_user, listView_message;
@@ -32,14 +36,14 @@ public abstract class ChatInit extends UIObject {
 
     ChatInit(IChatEvent chatEvent){
         try {
-            root = FXMLLoader.load(getClass().getResource(CHATGROUP));
+            root = FXMLLoader.load(getClass().getResource(CHAT_GROUP));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         Scene scene = new Scene(root);
         setScene(scene);
-        setResizable(false);
+        //setResizable(false);
 
         initController();
         initView();
@@ -47,6 +51,9 @@ public abstract class ChatInit extends UIObject {
     }
 
     private void initController() {
+        pane_main = $("pane_main", Pane.class);
+        vbox_main = $("vbox_main", VBox.class);
+        hbox_message_user = $("hbox_message_user", HBox.class);
         pane_message = $("pane_message", ScrollPane.class);
         pane_talk = $("pane_talk", Pane.class);
         listView_user = $("listView_user", ListView.class);

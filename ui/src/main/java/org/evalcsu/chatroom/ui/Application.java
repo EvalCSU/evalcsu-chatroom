@@ -41,7 +41,6 @@ public class Application extends javafx.application.Application {
             }
         });
         start.chatShow();
-
         start.addUserInfo("1111","2222","aaaa");
         start.addUserInfo("1111","3333","aaaa");
         start.addUserInfo("1112","4444","aaaa");

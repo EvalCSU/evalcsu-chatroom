@@ -34,7 +34,6 @@ public class ChatEventDefine {
         doEventTextSend();
         doEventTouchSend();
     }
-
     private void doEventTouchSend() {
         Label label_send = chatInit.$("label_send", Label.class);
         label_send.setOnMousePressed(event -> {
