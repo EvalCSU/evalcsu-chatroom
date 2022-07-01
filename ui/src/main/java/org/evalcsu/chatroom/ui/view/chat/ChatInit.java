@@ -39,7 +39,7 @@ public abstract class ChatInit extends UIObject {
     public HBox hbox_buttons;
     public TextArea textArea_input;
     public HBox hbox_send;
-    public Button button_send, label_user;
+    public Button button_send;
 
     ChatInit(IChatEvent chatEvent){
         try {

@@ -17,7 +17,7 @@
          <ListView id="listView_user" />
       </HBox>
          <VBox id="vbox_user_input" style="-fx-alignment: center;-fx-fill-width: true">
-            <HBox id="hbox_buttons">
+            <HBox id="hbox_buttons" alignment="CENTER_LEFT">
                <MenuButton id="menuButton_talk" mnemonicParsing="false" text="所有人" />
                <Button id="button_emoji" mnemonicParsing="false" text="😊" />
             </HBox>
