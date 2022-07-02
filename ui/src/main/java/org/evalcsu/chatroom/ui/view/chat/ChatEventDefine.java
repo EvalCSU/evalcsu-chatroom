@@ -1,5 +1,6 @@
 package org.evalcsu.chatroom.ui.view.chat;
 
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -34,10 +35,8 @@ public class ChatEventDefine {
         doEventTextSend();
         doEventTouchSend();
     }
-
     private void doEventTouchSend() {
-        Label label_send = chatInit.$("label_send", Label.class);
-        label_send.setOnMousePressed(event -> {
+        chatInit.button_send.setOnMousePressed(event -> {
             doEventSendMsg();
         });
     }
@@ -61,7 +60,11 @@ public class ChatEventDefine {
         System.out.println("发送消息：" + msg);
         // 发送事件给自己添加消息
         chatMethod.addTalkMsgSend(chatInit.commonId, msg, msgDate);
-        textArea_input.clear();
+        // 如果不在下一个 tick 清除, 触发 doEventSendMsg 的 enter 会被保留
+        Platform.runLater( () -> {
+            textArea_input.clear();
+        });
+
     }
 
     private void doEventDelUser() {

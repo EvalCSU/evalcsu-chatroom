@@ -3,8 +3,6 @@ package org.evalcsu.chatroom.ui.view.chat;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.MenuItem;
-import org.evalcsu.chatroom.ui.util.CacheUtil;
-import org.evalcsu.chatroom.ui.view.chat.element.ElementTalk;
 
 public class ChatView {
 

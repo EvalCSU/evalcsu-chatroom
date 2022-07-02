@@ -10,6 +10,7 @@ import javafx.scene.text.TextFlow;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 public class ElementMessage {
 
@@ -25,7 +26,7 @@ public class ElementMessage {
 
         Pane pane_receive = null;
         try {
-            pane_receive = FXMLLoader.load(getClass().getResource(PANE_MESSAGE_RECEIVE));
+            pane_receive = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(PANE_MESSAGE_RECEIVE)));
         } catch (IOException e) {
             e.printStackTrace();
         }
